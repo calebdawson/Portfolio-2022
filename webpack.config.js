@@ -28,7 +28,7 @@ module.exports = {
     ], 
   },
   devServer: {
-    contentBase: resolveAppPath('public'),
+    contentBase: "./public/index.html",
     compress: true,
     hot: true,
     host,
