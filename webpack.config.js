@@ -33,6 +33,8 @@ module.exports = {
     hot: true,
     host,
     port: 3000,
-    publicPath: '/',
+    devMiddleware: {
+        publicPath: '/',
+    },
   },
 }
