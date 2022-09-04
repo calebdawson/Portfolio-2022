@@ -28,7 +28,9 @@ module.exports = {
     ], 
   },
   devServer: {
-    contentBase: "./public/index.html",
+    static: {
+      directory: "./public/index.html",
+    },
     compress: true,
     hot: true,
     host,
