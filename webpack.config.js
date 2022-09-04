@@ -1,5 +1,10 @@
 const path = require("path");
 const webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const host = process.env.HOST || 'localhost';
+
+process.env.NODE_ENV = 'development';
 
 module.exports = {
   entry: "./src/index.js",
@@ -21,5 +26,13 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       }
     ], 
+  },
+  devServer: {
+    contentBase: resolveAppPath('public'),
+    compress: true,
+    hot: true,
+    host,
+    port: 3000,
+    publicPath: '/',
   },
 }
