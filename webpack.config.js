@@ -41,7 +41,7 @@ module.exports = {
     },
   },
   plugins: [
-    new HtmlWebpackPlugins({
+    new HtmlWebpackPlugin({
         inject: true,
         template: resolveAppPath('public/index.html'),
     }),
