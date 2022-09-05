@@ -40,4 +40,10 @@ module.exports = {
         publicPath: '/',
     },
   },
+  plugins: [
+    new HtmlWebpackPlugins({
+        inject: true,
+        template: resolveAppPath('public/index.html'),
+    }),
+  ],
 }
